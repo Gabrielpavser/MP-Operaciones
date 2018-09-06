@@ -5,11 +5,12 @@ import datetime
 from datetime import date, timedelta
 yesterday = date.today() - timedelta(1)
 ayer = yesterday.strftime('%d/%m/%Y')
-contraseña = 'Caro:1993'
-usuario = 'carolina.gonzalez@mercadolibre.com'
+contraseña = 'introducircontraseña'
+usuario = 'introducir usuario'
 driver = webdriver.Chrome("C:/Users/carogonzalez/Desktop/chromedriver.exe")
 driver.maximize_window()
 driver.implicitly_wait(30)
+#Abrir múltiples pestañas
 driver.get('https://app.equals.com.br/conciliador/empresa/index/show')
 driver.execute_script("window.open('https://app.equals.com.br/conciliador/empresa/index/show','new window')")
 driver.execute_script("window.open('https://app.equals.com.br/conciliador/empresa/index/show','tab3')")
@@ -22,14 +23,17 @@ driver.execute_script("window.open('https://app.equals.com.br/conciliador/empres
 driver.execute_script("window.open('https://app.equals.com.br/conciliador/empresa/index/show','tab10')")
 driver.execute_script("window.open('https://app.equals.com.br/conciliador/empresa/index/show','tab11')")
 driver.execute_script("window.open('https://app.equals.com.br/conciliador/empresa/index/show','tab12')")
+#Seleccionar la pestaña a utilizar
 pestañas = driver.window_handles
 driver.switch_to.window(pestañas [0])
+#Loguearse
 user = driver.find_element_by_id ("username")
 user.send_keys(usuario)
 passw = driver.find_element_by_id ("password")
 passw.send_keys(contraseña)
 enter = driver.find_element_by_id ("enter-equals")
 enter.click()
+#Elegir opción para ejecutar reporte
 driver.find_element_by_link_text("Conciliação").click()
 driver.find_element_by_link_text("Resumo Conc. de Vendas").click()
 periodo_entrada = driver.find_element_by_id ("periodoDe")
@@ -47,6 +51,7 @@ driver.implicitly_wait(25)
 driver.find_element_by_id ("opcaoDataPagamento").click ()
 driver.find_element_by_id ("realizaDownload").click ()
 driver.find_element_by_id ("botaoDownload").click ()
+#Cambiar de pestaña para ejecutar otro reporte
 driver.switch_to.window(pestañas [1])
 user = driver.find_element_by_id ("username")
 user.send_keys(usuario)
