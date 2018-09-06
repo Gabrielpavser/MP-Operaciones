@@ -1,10 +1,14 @@
-""" Repositorio de Funciones - Automatización Colaborativa """
-"""Todas estas funciones son genéricas y contienen las librerías a incluir"""
- 	# - Para mejorar la performance del prototipo es recomendable importar una 
-	# sola vez la librería en la parte superior del programa
+#      Repositorio de Funciones - Automatización Colaborativa
+
+
+#     Todas estas funciones son genéricas y contienen las librerías a incluir
+
+# 	- Para mejorar la performance del prototipo es recomendable importar una 
+#	 sola vez la librería en la parte superior del programa
 
 
 ############################# Chrome ###############################
+
 ##
 #Define cual va ser nuestro Explorador.
 ##
