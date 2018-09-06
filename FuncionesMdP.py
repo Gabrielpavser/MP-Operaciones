@@ -4,7 +4,7 @@
 	# sola vez la librería en la parte superior del programa
 
 
-############################# Chrome
+############################# Chrome ###############################
 ##
 #Define cual va ser nuestro Explorador.
 ##
